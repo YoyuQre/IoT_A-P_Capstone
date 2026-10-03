@@ -1,0 +1,29 @@
+% Detection Performance Comparison Table
+% Generated automatically from experiment results
+
+\begin{table}[htbp]
+  \centering
+  \caption{Detection performance across experiments and thresholds.}
+  \label{tab:detection_performance}
+  \begin{tabular}{lcccccc}
+    \toprule
+    Experiment & Threshold & Accuracy & Precision & Recall & F1-Score & FPR \\
+    \midrule
+    A Normal & 2.0 & 1.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+    A Normal & 3.0 & 1.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+    A Normal & 4.0 & 1.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+    B Traffic Spike & 2.0 & 1.000 & 1.000 & 1.000 & 1.000 & 0.000 \\
+    B Traffic Spike & 3.0 & 1.000 & 1.000 & 1.000 & 1.000 & 0.000 \\
+    B Traffic Spike & 4.0 & 1.000 & 1.000 & 1.000 & 1.000 & 0.000 \\
+    C Destination Expansion & 2.0 & 1.000 & 1.000 & 1.000 & 1.000 & 0.000 \\
+    C Destination Expansion & 3.0 & 1.000 & 1.000 & 1.000 & 1.000 & 0.000 \\
+    C Destination Expansion & 4.0 & 1.000 & 1.000 & 1.000 & 1.000 & 0.000 \\
+    D Combined & 2.0 & 1.000 & 1.000 & 1.000 & 1.000 & 0.000 \\
+    D Combined & 3.0 & 1.000 & 1.000 & 1.000 & 1.000 & 0.000 \\
+    D Combined & 4.0 & 1.000 & 1.000 & 1.000 & 1.000 & 0.000 \\
+    E Threshold Study & 2.0 & 1.000 & 1.000 & 1.000 & 1.000 & 0.000 \\
+    E Threshold Study & 3.0 & 1.000 & 1.000 & 1.000 & 1.000 & 0.000 \\
+    E Threshold Study & 4.0 & 1.000 & 1.000 & 1.000 & 1.000 & 0.000 \\
+    \bottomrule
+  \end{tabular}
+\end{table}

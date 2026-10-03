@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "author": "IoT A&P Capstone Team",
+  "description": "ESP32 IoT Device Simulation for Behavioural Fingerprinting - Demonstrates virtual device identity, periodic telemetry, and anomaly simulation",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp32",
+      "top": 60,
+      "left": 60,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht22",
+      "top": 180,
+      "left": 20,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_status",
+      "top": 180,
+      "left": 180,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_anomaly",
+      "top": 220,
+      "left": 180,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-button",
+      "id": "btn_anomaly",
+      "top": 260,
+      "left": 100,
+      "attrs": {
+        "color": "red"
+      }
+    }
+  ],
+  "connections": [
+    ["esp32:4", "dht22:VDD"],
+    ["esp32:5", "dht22:GND"],
+    ["esp32:15", "dht22:DATA"],
+    ["esp32:21", "led_status:A"],
+    ["esp32:GND.1", "led_status:C"],
+    ["esp32:22", "led_anomaly:A"],
+    ["esp32:GND.2", "led_anomaly:C"],
+    ["esp32:23", "btn_anomaly:1"],
+    ["esp32:GND.3", "btn_anomaly:2"]
+  ],
+  "dependencies": {}
+}

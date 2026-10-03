@@ -1,0 +1,60 @@
+# Wokwi Project Configuration for IoT Device Behaviour Fingerprinting
+# This file defines the Wokwi project metadata and simulation settings.
+
+[project]
+name = "IoT Behaviour Fingerprinting - ESP32 Device Simulator"
+description = """
+Virtual IoT device demonstrating:
+- Device identity (Smart Bulb/Camera/Lock/Meter/TV)
+- Periodic telemetry generation (simulated DHT22 sensor)
+- Normal communication behaviour (JSON payloads via serial)
+- Controlled anomaly injection via button press
+  * Traffic Spike (10x packet rate)
+  * Destination Expansion (8x destinations)
+  * Combined (both)
+- Visual indicators (status + anomaly LEDs)
+
+This is a DESIGN ARTIFACT for the Wokwi simulation layer (Layer A).
+The statistical simulation pipeline runs in Python (Layer B).
+See src/simulator.py for the reproducible experimental engine.
+"""
+version = "1.0.0"
+author = "IoT A&P Capstone Team"
+
+[simulation]
+# Serial monitor baud rate matches firmware
+serial_baudrate = 115200
+
+# Simulation speed (1.0 = real-time)
+speed = 1.0
+
+[hardware]
+# Main MCU
+mcu = "esp32"
+
+# Components used
+components = [
+  "wokwi-esp32-devkit-v1",
+  "wokwi-dht22",
+  "wokwi-led",      # Status (green)
+  "wokwi-led",      # Anomaly (red)
+  "wokwi-button"    # Anomaly trigger
+]
+
+[notes]
+# To simulate different device categories, modify DEVICE_ID and DEVICE_TYPE in firmware.ino
+# Each device category has distinct synthetic communication characteristics:
+# - Smart Bulb: Low rate, small packets, 1-2 destinations, MQTT/CoAP
+# - Smart Camera: High rate, large packets, 1-3 destinations, RTSP/HTTPS
+# - Smart Lock: Very low rate, tiny packets, 1 destination, MQTT/CoAP
+# - Smart Meter: Periodic moderate rate, medium packets, 1 destination, MQTT/HTTP
+# - Smart TV: Bursty high rate, large packets, 2-6 destinations, HTTPS/QUIC/RTMP
+
+# Anomaly modes (triggered by button):
+# 1. Traffic Spike: 10x packet rate increase
+# 2. Destination Expansion: 8x destination count increase  
+# 3. Combined: Both rate and destination increases
+# 4. Normal: Auto-reset after 30 seconds
+
+# The serial output (JSON) can be captured and fed to Python ingestion bridge
+# (see src/io_bridge.py for the file-based integration design)

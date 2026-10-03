@@ -1,0 +1,21 @@
+{
+  "total_experiments": 5,
+  "thresholds_tested": [
+    2.0,
+    3.0,
+    4.0
+  ],
+  "default_threshold": 3.0,
+  "perfect_detection_experiments": [
+    "experiment_b_traffic_spike",
+    "experiment_c_destination_expansion",
+    "experiment_d_combined",
+    "experiment_e_threshold_study"
+  ],
+  "experiments_with_false_positives": [],
+  "experiment_a_fpr": [
+    0.0,
+    0.0,
+    0.0
+  ]
+}

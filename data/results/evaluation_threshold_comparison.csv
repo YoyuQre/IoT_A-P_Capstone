@@ -1,0 +1,4 @@
+threshold,accuracy,precision,recall,f1_score,false_positive_rate,accuracy_delta,precision_delta,recall_delta,f1_score_delta,false_positive_rate_delta
+2.0,1.0,1.0,1.0,1.0,0.0,,,,,
+3.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+4.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0

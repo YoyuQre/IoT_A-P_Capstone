@@ -1,0 +1,21 @@
+# IoT Device Behaviour Fingerprinting and Simulation-Based Anomaly Detection
+# Requirements for the simulation pipeline
+
+# Core numerical computing
+numpy>=1.26.0
+
+# Data manipulation
+pandas>=2.1.0
+
+# Visualization
+matplotlib>=3.8.0
+
+# Optional: for schema validation (used in schemas.py type hints only)
+# typing-extensions>=4.8.0  # Included in Python 3.13+
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Type checking (optional, for development)
+# mypy>=1.7.0

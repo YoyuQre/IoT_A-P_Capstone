@@ -1,0 +1,13 @@
+experiment,anomaly_type,threshold,tp,tn,fp,fn,precision,recall,f1_score
+experiment_b_traffic_spike,traffic_spike,2.0,234,1364,0,0,1.0,1.0,1.0
+experiment_b_traffic_spike,traffic_spike,3.0,234,1364,0,0,1.0,1.0,1.0
+experiment_b_traffic_spike,traffic_spike,4.0,234,1364,0,0,1.0,1.0,1.0
+experiment_c_destination_expansion,destination_expansion,2.0,234,1364,0,0,1.0,1.0,1.0
+experiment_c_destination_expansion,destination_expansion,3.0,234,1364,0,0,1.0,1.0,1.0
+experiment_c_destination_expansion,destination_expansion,4.0,234,1364,0,0,1.0,1.0,1.0
+experiment_d_combined,combined,2.0,234,1364,0,0,1.0,1.0,1.0
+experiment_d_combined,combined,3.0,234,1364,0,0,1.0,1.0,1.0
+experiment_d_combined,combined,4.0,234,1364,0,0,1.0,1.0,1.0
+experiment_e_threshold_study,combined,2.0,234,1364,0,0,1.0,1.0,1.0
+experiment_e_threshold_study,combined,3.0,234,1364,0,0,1.0,1.0,1.0
+experiment_e_threshold_study,combined,4.0,234,1364,0,0,1.0,1.0,1.0
