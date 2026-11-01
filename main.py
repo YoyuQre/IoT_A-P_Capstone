@@ -690,8 +690,6 @@ PHASE_RUNNERS = {
     9: run_phase9,
     10: run_phase10,
 }
-
-
 def main():
     args = parse_args()
     
@@ -720,3 +718,30 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+
+
+    def run_phase4(args):
+    from src.anomalies import inject_anomalies, validate_anomalous_traffic
+    from src.simulator import generate_normal_traffic
+
+    normal_df = generate_normal_traffic(seed=args.seed)
+    all_results = {}
+
+    # Iterate systematically through distinct anomaly attack vectors
+    for anomaly_type in ["traffic_spike", "destination_expansion", "combined"]:
+        result_df = inject_anomalies(anomaly_type=anomaly_type, seed=args.seed)
+        
+        anomaly_count = int(result_df["is_anomaly"].sum())
+        normal_count = int((~result_df["is_anomaly"]).sum())
+        
+        # Enforce automated contract and schema validation post-injection
+        results = validate_anomalous_traffic(result_df, anomaly_type)
+        if not results["valid"]:
+            raise ValueError(f"Validation failed for {anomaly_type}: {results['errors']}")
+            
+        all_results[anomaly_type] = {
+            "anomaly_count": anomaly_count,
+            "normal_count": normal_count,
+            "total_count": len(result_df)
+        }
+    return True

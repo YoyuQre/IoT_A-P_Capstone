@@ -46,15 +46,42 @@
     }
   ],
   "connections": [
-    ["esp32:4", "dht22:VDD"],
-    ["esp32:5", "dht22:GND"],
-    ["esp32:15", "dht22:DATA"],
-    ["esp32:21", "led_status:A"],
-    ["esp32:GND.1", "led_status:C"],
-    ["esp32:22", "led_anomaly:A"],
-    ["esp32:GND.2", "led_anomaly:C"],
-    ["esp32:23", "btn_anomaly:1"],
-    ["esp32:GND.3", "btn_anomaly:2"]
+    [
+      "esp32:4",
+      "dht22:VDD"
+    ],
+    [
+      "esp32:5",
+      "dht22:GND"
+    ],
+    [
+      "esp32:15",
+      "dht22:DATA"
+    ],
+    [
+      "esp32:21",
+      "led_status:A"
+    ],
+    [
+      "esp32:GND.1",
+      "led_status:C"
+    ],
+    [
+      "esp32:22",
+      "led_anomaly:A"
+    ],
+    [
+      "esp32:GND.2",
+      "led_anomaly:C"
+    ],
+    [
+      "esp32:23",
+      "btn_anomaly:1"
+    ],
+    [
+      "esp32:GND.3",
+      "btn_anomaly:2"
+    ]
   ],
   "dependencies": {}
 }
