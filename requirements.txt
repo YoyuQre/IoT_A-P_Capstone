@@ -10,6 +10,10 @@ pandas>=2.1.0
 # Visualization
 matplotlib>=3.8.0
 
+# Interactive dashboard
+streamlit>=1.49.0
+plotly>=5.22.0
+
 # Optional: for schema validation (used in schemas.py type hints only)
 # typing-extensions>=4.8.0  # Included in Python 3.13+
 
